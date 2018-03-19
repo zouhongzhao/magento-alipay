@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<payment>
+			<groups>
+				<alipay translate="label" module="alipay">
+					<label>Alipay Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>100</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+					 	<active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+						<title translate="label,comment">
+							<label>Title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</title>
+						<description translate="label,comment">
+							<label>Description</label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</description>
+						
+						<app_id translate="label,comment">
+							<label>App Id</label>
+							<comment>
+								<![CDATA[<a target="_blank" href="https://open.alipay.com"> 在开发者中心创建应用，填写添加了电脑网站支付的应用的APPID</a>]]>
+							</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</app_id>
+						<app_secret_key translate="label,comment">
+							<label>App Secret Key</label>
+							<comment>
+								<![CDATA[应用私钥，在我的应用里查看详情，设置应用公钥，用RSA签名验签工具会生成私钥和公钥，填写生成的私钥]]>
+							</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</app_secret_key>
+						<app_public_key translate="label,comment">
+							<label>App Public Key</label>
+							<comment>
+								<![CDATA[应用公钥，在我的应用里查看详情，设置应用公钥，用RSA签名验签工具会生成私钥和公钥，填写生成的公钥]]>
+							</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</app_public_key>
+						<!-- <fee_type translate="label">
+                            <label>Calculate Handling Fee</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>shipping/source_handlingType</source_model>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fee_type>
+						<fee>
+                            <label>Fee</label>
+                            <frontend_model>alipay/adminhtml_system_config_field_fee</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fee> -->
+						<!-- <transaction_url translate="label,comment">
+							<label>Transaction Url</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</transaction_url> -->
+						<error_report_receivers translate="label">
+                            <label>Error Report Receivers</label>
+                            <comment>
+								<![CDATA[
+								Use comma as separator when there're more than 1 receiver.
+								]]>
+							</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <validate>required-entry</validate>
+                            <show_in_store>1</show_in_store>
+                        </error_report_receivers>
+                        <payment_action translate="label">
+						    <label>Payment Action</label>
+						    <frontend_type>select</frontend_type>
+						    <source_model>paygate/authorizenet_source_paymentAction</source_model>
+						    <sort_order>90</sort_order>
+						    <show_in_default>1</show_in_default>
+						    <show_in_website>1</show_in_website>
+						</payment_action>
+						<order_status translate="label">
+                            <label>New Order Status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </order_status>
+						<sort_order translate="label">
+                            <label>Sort order</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sort_order>
+					</fields>
+				</alipay>
+			</groups>
+		</payment>
+	</sections>
+</config>
