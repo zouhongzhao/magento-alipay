@@ -8,5 +8,9 @@ magento1.x 支付宝支付插件
   * 查询退款状态
   * 退款列表
   
+## 帮助
+  * 有问题可以加我qq问我: 529894459
+  * Magento2专业中文社区: [http://bbs.mallol.cn/](http://bbs.mallol.cn/)
+
 ##
 ![image](https://github.com/zouhongzhao/magento-alipay/blob/master/alipay.gif)
